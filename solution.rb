@@ -85,7 +85,7 @@ next_twelve_hours.each do |hour_hash|
 
     hours_from_now = seconds_from_now / 60 / 60
 
-    puts "In #{hours_from_now.round} hours, there is a #{precip_prob} chance of precipitation."
+    puts "In #{hours_from_now.round} hours, there is a #{(precip_prob * 100).round}% chance of precipitation."
   end
 end
 
