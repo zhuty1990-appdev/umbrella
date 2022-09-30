@@ -58,7 +58,7 @@ Some handy links:
 
 Most of working with APIs boils down to working with [`Array`s](https://chapters.firstdraft.com/chapters/758) and [`Hash`es](https://chapters.firstdraft.com/chapters/767).
 
-You will likely also need to use [`if` statements] and [loops](https://chapters.firstdraft.com/chapters/764) (most useful programs do).
+You will likely also need to use [`if` statements](https://chapters.firstdraft.com/) and [loops](https://chapters.firstdraft.com/chapters/764) (most useful programs do).
 
 Here are some less familiar methods that will be useful:
 
