@@ -89,7 +89,8 @@ Where are you?
 brooklyn
 Checking the weather at Brooklyn....
 Your coordinates are 40.6781784, -73.9441579.
-It is currently 51.33°F and will be possible light rain starting in 25 min.
+It is currently 51.33°F.
+Next hour: Possible light rain starting in 25 min.
  
 Hours from now vs Precipitation probability
  
