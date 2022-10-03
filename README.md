@@ -75,3 +75,42 @@ Here are some less familiar methods that will be useful:
 
     p array[2..4] # => [1, 19, 23]
     ```
+    
+## Stretch goal
+  
+Use [the ascii_charts gem](https://github.com/benlund/ascii_charts) to produce output that includes a chart, like this:
+  
+```
+========================================
+    Will you need an umbrella today?    
+========================================
+
+Where are you?
+brooklyn
+Checking the weather at Brooklyn....
+Your coordinates are 40.6781784, -73.9441579.
+It is currently 51.33°F and will be possible light rain starting in 25 min.
+ 
+Hours from now vs Precipitation probability
+ 
+80|                                    
+75| *                                  
+70| *                                  
+65| *                                  
+60| *                                  
+55| *                                  
+50| *                                  
+45| *                                  
+40| *                                  
+35| *                                  
+30| *                                  
+25| *                             *  * 
+20| *                          *  *  * 
+15| *              *  *  *  *  *  *  * 
+10| *           *  *  *  *  *  *  *  * 
+ 5| *  *  *  *  *  *  *  *  *  *  *  * 
+ 0+-*--*--*--*--*--*--*--*--*--*--*--*-
+    1  2  3  4  5  6  7  8  9 10 11 12 
+ 
+You might want to take an umbrella!
+```
