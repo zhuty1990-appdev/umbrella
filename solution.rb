@@ -56,11 +56,16 @@ currently_hash = parsed_dark_sky_data.fetch("currently")
 
 current_temp = currently_hash.fetch("temperature")
 
-minutely_hash = parsed_dark_sky_data.fetch("minutely")
+minutely_hash = parsed_dark_sky_data.fetch("minutely", false)
 
-next_hour_summary = minutely_hash.fetch("summary").downcase
+puts "It is currently #{current_temp}°F."
 
-puts "It is currently #{current_temp}°F and will be #{next_hour_summary}"
+# Some locations around the world do not come with minutely data.
+if minutely_hash
+  next_hour_summary = minutely_hash.fetch("summary")
+
+  puts "Next hour: #{next_hour_summary}."
+end
 
 hourly_hash = parsed_dark_sky_data.fetch("hourly")
 
