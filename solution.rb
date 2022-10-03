@@ -56,11 +56,11 @@ currently_hash = parsed_dark_sky_data.fetch("currently")
 
 current_temp = currently_hash.fetch("temperature")
 
-minutely_hash = parsed_dark_sky_data.fetch("minutely", false)
-
 puts "It is currently #{current_temp}°F."
 
 # Some locations around the world do not come with minutely data.
+minutely_hash = parsed_dark_sky_data.fetch("minutely", false)
+
 if minutely_hash
   next_hour_summary = minutely_hash.fetch("summary")
 
