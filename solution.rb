@@ -64,7 +64,7 @@ minutely_hash = parsed_dark_sky_data.fetch("minutely", false)
 if minutely_hash
   next_hour_summary = minutely_hash.fetch("summary")
 
-  puts "Next hour: #{next_hour_summary}."
+  puts "Next hour: #{next_hour_summary}"
 end
 
 hourly_hash = parsed_dark_sky_data.fetch("hourly")
