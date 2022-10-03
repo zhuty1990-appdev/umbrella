@@ -1,5 +1,6 @@
 require "open-uri"
 require "json"
+require "ascii_charts"
 
 line_width = 40
 
@@ -8,8 +9,8 @@ puts "Will you need an umbrella today?".center(line_width)
 puts "="*line_width
 puts
 puts "Where are you?"
-user_location = gets.chomp
-# user_location = "Saint Paul"
+# user_location = gets.chomp
+user_location = "Brooklyn"
 puts "Checking the weather at #{user_location}...."
 
 # Get the lat/lng of location from Google Maps API
@@ -72,22 +73,32 @@ precip_prob_threshold = 0.10
 
 any_precipitation = false
 
+chart_data = []
+
 next_twelve_hours.each do |hour_hash|
 
   precip_prob = hour_hash.fetch("precipProbability")
 
   if precip_prob > precip_prob_threshold
     any_precipitation = true
-
-    precip_time = Time.at(hour_hash.fetch("time"))
-
-    seconds_from_now = precip_time - Time.now
-
-    hours_from_now = seconds_from_now / 60 / 60
-
-    puts "In #{hours_from_now.round} hours, there is a #{(precip_prob * 100).round}% chance of precipitation."
   end
+
+  precip_time = Time.at(hour_hash.fetch("time"))
+
+  seconds_from_now = precip_time - Time.now
+
+  hours_from_now = (seconds_from_now / 60 / 60).round
+
+  precip_percentage = (precip_prob * 100).round
+
+  chart_data.push([hours_from_now.round, precip_percentage])
 end
+
+puts AsciiCharts::Cartesian.new(
+  chart_data,
+  :bar => true,
+  :title => "Hours from now vs Precipitation probability"
+).draw
 
 if any_precipitation == true
   puts "You might want to take an umbrella!"
