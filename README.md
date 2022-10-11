@@ -11,7 +11,10 @@ There is a solution in the file called `solution.rb`.
     ```
     ruby solution.rb
     ```
-- Try it out with some rainy locations — [you should be able to find some using this live radar](https://www.rainviewer.com/weather-radar-map-live.html).
+- Before it will work, you need to create two **environment variables** in your Gitpod dashboard. [Read how to do that here.](https://chapters.firstdraft.com/chapters/792)
+
+    You need to create env vars called `GMAPS_KEY` and `DARK_SKY_KEY`. You'll find the values to assign in the assignment in Canvas.
+- Then, try running `solution.rb` and enter some rainy locations — [you should be able to find some using this live radar](https://www.rainviewer.com/weather-radar-map-live.html).
 - Don't peek at the solution until you've tried things yourself.
 
 ## Program outline
