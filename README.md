@@ -15,7 +15,11 @@ There is a solution in the file called `solution.rb`.
     - [Read how to create environment variables here.](https://chapters.firstdraft.com/chapters/792)
     - You need to create env vars called `GMAPS_KEY` and `DARK_SKY_KEY`. You'll find the values to assign in the assignment in Canvas.
     - When asked for "Organization/Repository", say `*/*`. This will make the env vars available across all of your workspaces.
-    - Don't forget to restart your workspace after the variables have been saved.
+    - Don't forget to restart your workspace after the variables have been saved
+        - In your [Gitpod dashboard](https://gitpod.io/workspaces), find the workspace.
+        - Click on the three dots next to its name.
+        - Stop.
+        - Once it has shut down, Open it again.
 - Then, try running `solution.rb` and enter some rainy locations — [you should be able to find some using this live radar](https://www.rainviewer.com/weather-radar-map-live.html).
 - Don't peek at the solution until you've tried things yourself.
 
